@@ -25,7 +25,7 @@ class Weather :
         url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={self.api_key}&units=metric"
         response = requests.get(url).json()
         if response.get('cod') != "200":
-            print(response.get('cod'))
+            # print(response.get('cod'))
             return {'error':response.get('message','Something went wrong')}
         
         forecast_list = []
