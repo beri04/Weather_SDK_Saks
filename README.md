@@ -1,15 +1,20 @@
-# Weather SDK File 
+# 🌦️ Weather SDK
 
+A simple Python SDK to fetch **current weather** and **5-day forecast** using the [OpenWeather API](https://openweathermap.org/api).
 
-# 📥 Installation 
-**Clone** this repo and checkout the Code
-```bash 
-git clone : https://github.com/beri04/Weather_SDK_Saks.git
+---
+
+## 📥 Installation
+
+Clone this repo and install dependencies:
+
+```bash
+git clone https://github.com/beri04/Weather_SDK_Saks.git
 cd Weather_SDK_Saks
 pip install -r requirements.txt
 
 
-# 👩‍💻EXAMPLE CODE 
+👩‍💻 EXAMPLE CODE 
 ```python 
 
 from weather_sdk.weather import Weather
@@ -18,5 +23,10 @@ from weather_sdk.weather import Weather
 #TO check the weather of any city
 #For example - DELHI
 
-sdk = Weather("fake key")
+sdk = Weather("your api_key here")
+
+# Current weather in Delhi
 print(sdk.get_current_weather("Delhi"))
+
+# 5-day forecast for Chandigarh
+print(sdk.get_forecast_weather("Chandigarh"))
