@@ -1,5 +1,6 @@
 # 🌦️ Weather SDK
 
+[![Run tests](https://github.com/beri04/Weather_SDK_Saks/actions/workflows/test.yml/badge.svg)](https://github.com/beri04/Weather_SDK_Saks/actions/workflows/test.yml)
 A simple Python SDK to fetch **current weather** and **5-day forecast** using the [OpenWeather API](https://openweathermap.org/api).
 
 ---
