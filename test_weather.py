@@ -2,7 +2,7 @@ import pytest
 from weather_sdk.weather import Weather
 
 
-# #Just checking the printint of data 
+# #Just checking the printing of data 
 # sdk = Weather("400626402097ea8eb43010bebd5de507")
 
 # print(sdk.get_current_weather("Delhi"))
