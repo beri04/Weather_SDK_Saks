@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Clone Repository'){
             steps{
-                git branch: 'master', url:'https://github.com/beri04/Weather_SDK_Saks'
+                git branch: 'main', url:'https://github.com/beri04/Weather_SDK_Saks'
             }
         }
         stage('Build Docker Image'){
