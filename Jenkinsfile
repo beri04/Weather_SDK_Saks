@@ -1,9 +1,16 @@
 pipeline{
     agent any
 
+    environment{
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-cred')
+        IMAGE_NAME = "saks04/weather-sdk"
+        TAG = "latest"
+    }
+
     stages{
         stage('Clone Repository'){
             steps{
+                echo "Fetching from github⌛"
                 git branch: 'main', url:'https://github.com/beri04/Weather_SDK_Saks'
             }
         }
