@@ -30,6 +30,19 @@ pipeline{
                 sh 'docker run weather_sdk'
             }
         }
+        stage('Login to DockerHub') {
+            steps {
+                echo "🔐 Logging in to Docker Hub..."
+                sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                echo "🚀 Pushing image to Docker Hub..."
+                sh 'docker push $IMAGE_NAME:$TAG'
+            }
+        }
     }
     post{
         success{
